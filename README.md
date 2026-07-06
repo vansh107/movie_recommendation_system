@@ -4,11 +4,11 @@ A content-based Movie Recommendation System built using Python, Scikit-learn, an
 
 ## 🚀 Live Demo
 
-https://movie-recommendation-system-4s7sxyljinr83emhnbtnbq.streamlit.app
+https://movierecommendationsystemgit-wbnpg6tsfes8cr7vlqsnct.streamlit.app/
 
 ## 💻 GitHub Repository
 
-https://github.com/rukhsanaa342/movie-recommendation-system
+https://github.com/vansh107/movie_recommendation_system.git
 
 ## ✨ Features
 
