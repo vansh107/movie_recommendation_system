@@ -1,0 +1,7 @@
+venv
+
+cat > .gitignore << EOF
+similarity.pkl
+.venv/
+__pycache__/
+EOF
