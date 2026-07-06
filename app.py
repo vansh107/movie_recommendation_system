@@ -4,7 +4,8 @@ import pandas as pd
 
 import requests
 
-
+from huggingface_hub import hf_hub_download
+import os
 
 session = requests.Session()
 
@@ -43,9 +44,18 @@ def recommend(movie):
         recommended_movies_poster.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_poster
 
-movies_dict = pickle.load(open('movie_dict.pkl','rb'))
-movies =pd.DataFrame(movies_dict)
-similarity = pickle.load(open('similarity.pkl','rb'))
+movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
+movies = pd.DataFrame(movies_dict)
+
+if not os.path.exists("similarity.pkl"):
+    hf_hub_download(
+        repo_id="rukhsar-1234/movie-recommendation-files",
+        filename="similarity.pkl",
+        repo_type="dataset",
+        local_dir="."
+    )
+
+similarity = pickle.load(open("similarity.pkl", "rb"))
 
 st.title("Movie Recommendation System")
 

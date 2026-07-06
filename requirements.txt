@@ -39,3 +39,4 @@ typing_extensions==4.16.0
 urllib3==2.2.2
 uvicorn==0.50.1
 websockets==16.0
+huggingface_hub
